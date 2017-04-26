@@ -193,5 +193,5 @@ describe('Maestro', function() {
 
 });
 
-describe('should support China UnionPay');
-describe('should support Switch');
+// describe('should support China UnionPay');
+// describe('should support Switch');
