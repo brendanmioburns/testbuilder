@@ -131,6 +131,12 @@ describe('Discover', function() {
   // Implement these tests (and others) and make them pass!
   var assert = chai.assert;
 
+  it('has a prefix of 65 and length of 16', function() {
+    assert(detectNetwork('6512345678901234') === 'Discover');
+  });
+  it('has a prefix of 65 and length of 19', function() {
+    assert(detectNetwork('6512345678901234567') === 'Discover');
+  });
   it('has a prefix of 6011 and a length of 16', function() {
     assert(detectNetwork('6011123456789012') === 'Discover');
   });
@@ -148,13 +154,6 @@ describe('Discover', function() {
       });
     })(prefix);
   }
-
-  it('has a prefix of 65 and length of 16', function() {
-    assert(detectNetwork('6512345678901234') === 'Discover');
-  });
-  it('has a prefix of 65 and length of 19', function() {
-    assert(detectNetwork('6512345678901234567') === 'Discover');
-  });
 
 });
 
